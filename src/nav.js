@@ -1,6 +1,7 @@
 import loadHome from "./home";
 import loadMenu from "./menu";
 import loadContact from "./contact";
+import "bootstrap/dist/css/bootstrap.min.css";
 
 function createHeader() {
 	const header = document.createElement("header");
@@ -21,6 +22,7 @@ function createNav() {
 
 	const homeButton = document.createElement("button");
 	homeButton.classList.add("navButtons");
+	homeButton.classList.add("btn", "btn-outline-danger");
 	homeButton.textContent = "Home";
 	homeButton.addEventListener("click", (e) => {
 		if (e.target.classList.contains("active")) return;
@@ -30,6 +32,7 @@ function createNav() {
 
 	const menuButton = document.createElement("button");
 	menuButton.classList.add("navButtons");
+	menuButton.classList.add("btn", "btn-outline-danger");
 	menuButton.textContent = "Menu";
 	menuButton.addEventListener("click", (e) => {
 		if (e.target.classList.contains("active")) return;
@@ -39,6 +42,7 @@ function createNav() {
 
 	const contactButton = document.createElement("button");
 	contactButton.classList.add("navButtons");
+	contactButton.classList.add("btn", ".text-warning-emphasis");
 	contactButton.textContent = "Contact Us";
 	contactButton.addEventListener("click", (e) => {
 		if (e.target.classList.contains("active")) return;
