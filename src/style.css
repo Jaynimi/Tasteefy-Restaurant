@@ -1,0 +1,16 @@
+body {
+	font-family: "Montserrat", cursive;
+	font-size: 1.6rem;
+	color: var(--font-color);
+	background-image: url("TasteeHome.jpg");
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+.hello {
+	color: red;
+	/* background: url("./ae.png"); */
+}
+.navButtons {
+	background-color: aqua;
+}
