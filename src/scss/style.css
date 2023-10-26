@@ -9,8 +9,13 @@ body {
 	background-size: cover;
 }
 
+header {
+	background-color: rgba(0, 0, 0, 0.9);
+}
+
 .hello {
 	color: red;
+	color: #eebe95;
 	/* background: url("./ae.png"); */
 }
 .navButtons {

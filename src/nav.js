@@ -5,7 +5,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 function createHeader() {
 	const header = document.createElement("header");
-	header.classList.add("header");
+	header.classList.add("header", "py-3", "text-center");
+	header.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
+	header.style.color = "#dd7a23";
 
 	const restaurantName = document.createElement("h1");
 	restaurantName.classList.add("tastee");
@@ -21,8 +23,7 @@ function createNav() {
 	const nav = document.createElement("nav");
 
 	const homeButton = document.createElement("button");
-	homeButton.classList.add("navButtons");
-	homeButton.classList.add("btn", "btn-outline-danger");
+	homeButton.classList.add("navButtons", "btn", "text-white");
 	homeButton.textContent = "Home";
 	homeButton.addEventListener("click", (e) => {
 		if (e.target.classList.contains("active")) return;
@@ -31,8 +32,7 @@ function createNav() {
 	});
 
 	const menuButton = document.createElement("button");
-	menuButton.classList.add("navButtons");
-	menuButton.classList.add("btn", "btn-outline-danger");
+	menuButton.classList.add("navButtons", "btn", "text-white", "mx-3");
 	menuButton.textContent = "Menu";
 	menuButton.addEventListener("click", (e) => {
 		if (e.target.classList.contains("active")) return;
@@ -42,7 +42,7 @@ function createNav() {
 
 	const contactButton = document.createElement("button");
 	contactButton.classList.add("navButtons");
-	contactButton.classList.add("btn", ".text-warning-emphasis");
+	contactButton.classList.add("btn", "text-white");
 	contactButton.textContent = "Contact Us";
 	contactButton.addEventListener("click", (e) => {
 		if (e.target.classList.contains("active")) return;
@@ -79,17 +79,25 @@ function createMain() {
 
 function createFooter() {
 	const footer = document.createElement("footer");
-	footer.classList.add("footer");
+	footer.classList.add(
+		"footer",
+		"fixed-bottom",
+		"d-flex",
+		"justify-content-center",
+		"pt-3",
+	);
+	footer.style.backgroundColor = "rgba(0, 0, 0, 0.5)";
 
 	const copyright = document.createElement("p");
 	copyright.textContent = `Copyright \u00A9 ${new Date().getFullYear()}`;
+	copyright.style.color = "white";
 
 	const githubLink = document.createElement("a");
 	githubLink.href = "https://github.com/Jaynimi/Tasteefy-Restaurant";
 
 	const githubIcon = document.createElement("i");
-	githubIcon.classList.add("fab");
-	githubIcon.classList.add("fa-github");
+	githubIcon.classList.add("fab", "fa-github", "px-3", "fs-2");
+	githubIcon.style.color = "#eebe95";
 	githubLink.appendChild(githubIcon);
 
 	footer.appendChild(copyright);
