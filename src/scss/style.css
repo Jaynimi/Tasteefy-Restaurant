@@ -21,3 +21,7 @@ header {
 .navButtons {
 	background-color: aqua;
 }
+
+.menuImg {
+	max-width: 200px;
+}

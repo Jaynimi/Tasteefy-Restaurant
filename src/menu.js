@@ -68,6 +68,31 @@ function createMenuItem(name, description, image) {
 	const foodImage = document.createElement("img");
 	foodImage.src = image;
 	foodImage.alt = `${name}`;
+	foodImage.classList.add(
+		"menuImg",
+		"border",
+		"border-secondary-subtle",
+		"col-8",
+		"col-md-6",
+		"col-lg-3",
+	);
+	function updateImageHeight() {
+		if (window.innerWidth >= 1000) {
+			foodImage.style.height = "350px";
+		} else if (window.innerWidth >= 768) {
+			foodImage.style.height = "120px";
+		} else {
+			foodImage.style.height = "100px";
+		}
+	}
+
+	// Call the function to set the initial height
+	updateImageHeight();
+
+	// Listen for the window resize event and update the height accordingly
+	window.addEventListener("resize", updateImageHeight);
+
+	foodImage.style.objectFit = "cover";
 
 	menuItem.appendChild(foodImage);
 	menuItem.appendChild(foodName);
