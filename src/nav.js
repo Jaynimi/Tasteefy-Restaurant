@@ -112,6 +112,10 @@ function initializeWebsite() {
 	content.appendChild(createHeader());
 	content.appendChild(createMain());
 	content.appendChild(createFooter());
+
+	// Load 'Home' content and set the 'Home' button as active on page load
+	loadHome(); // Load Home content
+	setActiveButton(document.querySelector(".navButtons")); // Set the first button (Home) as active
 }
 
 export default initializeWebsite;
